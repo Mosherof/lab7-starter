@@ -123,12 +123,11 @@ function initFormHandler() {
 			recipeObject["rating"] = 5;
 		}
 
-		console.log(recipeObject);
+
 		// B6. TODO - Create a new <recipe-card> element
 		let card = document.createElement("recipe-card");
 		// B7. TODO - Add the recipeObject data to <recipe-card> using element.data
 		card.data = recipeObject;
-		console.log(card);
 		// B8. TODO - Append this new <recipe-card> to <main>
 		document.getElementsByTagName("main")[0].appendChild(card);
 		// B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
@@ -146,7 +145,8 @@ function initFormHandler() {
 		localStorage.setItem("recipes", []);
 		// B13. TODO - Delete the contents of <main>
 		document.getElementsByTagName("main")[0].remove();
-		document.createElement("main");
+		let newMain = document.createElement("Main");
+		document.getElementsByTagName("Body")[0].appendChild(newMain);
 	}
 	
 	)}
