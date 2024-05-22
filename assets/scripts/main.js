@@ -41,6 +41,10 @@ function addRecipesToDocument(recipes) {
 	// A10. TODO - Get a reference to the <main> element
 	const mainel = document.getElementsByTagName("main")[0];
 	// A11. TODO - Loop through each of the recipes in the passed in array,
+
+	if (recipes == null) {
+		return;
+	}
 	for (let i =0; i < recipes.length; i++){
 		// create a <recipe-card> element for each one, and populate each <recipe-card> with that recipe data using element.data = ...
 		let card = document.createElement("recipe-card");
